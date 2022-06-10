@@ -12,14 +12,14 @@ provider "digitalocean" {
 }
 
 resource "digitalocean_kubernetes_cluster" "k8s_iniciativa" {
-  name = var.k8s_name  
+  name = var.k8s_name
   region = var.region
   version = "1.22.8-do.1"
 
   node_pool {
     name       = "default"
     size       = "s-2vcpu-4gb"
-    node_count = 2
+    node_count = 3
   }
 }
 
